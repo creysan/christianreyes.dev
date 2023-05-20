@@ -50,7 +50,7 @@ function copyToClipboard(text) {
     document.body.removeChild(dummy);
 }
 
-/*
+
 // Disable right-click
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
@@ -69,4 +69,3 @@ document.onkeydown = (e) => {
   )
     return false;
 };
-*/
