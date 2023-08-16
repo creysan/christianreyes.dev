@@ -52,6 +52,7 @@ function copyToClipboard(text) {
 
 
 // Disable right-click
+/* 
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 function ctrlShiftKey(e, keyCode) {
@@ -69,3 +70,4 @@ document.onkeydown = (e) => {
   )
     return false;
 };
+*/

@@ -10,8 +10,12 @@
     <!-- bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- font -->
+    <!-- icons -->
     <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <!--fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Open+Sans:wght@300&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,16 +32,13 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">Course Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Me</a>
+                        <a class="nav-link" href="#blog">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -45,147 +46,51 @@
     </nav>
 
     <!-- home -->
-    <section class="bgimage" id="home">
-        <div class="container-fluid">
-            <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                <h2 class="hero_title">Hi, I'm Christian.</h2>
-                <p class="hero_desc">I am a fourth year at the University of California, Berkeley.</p>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- about -->
     <section id="about">
         <div class="container mt-4 pt-4">
-            <h1 class="text-center"> About Me</h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
-                    <img src="images/IMG_4219.jpg" class="imageAboutPage" alt="">
-                </div>
+                    <img src="images/chrisheadshot.PNG" class="imageAboutPage" alt="Headshot of me.">
+                    <ul class="social-icons-home">
+                        <li>
+                            <a style="text-decoration:none;" target="_blank" href="mailto:christian7reyes@gmail.com">
+                            <i class="fa fa-envelope home-icons" id="email-icon"></i>
+                            <span class="nav-text-email">Email</span>
+                            <span class="email">christian7reyes@gmail.com</span>
+                            </a>
+                        </li>
 
+                        <li>
+                            <a style="text-decoration:none;" target="_blank" href="https://www.linkedin.com/in/christianreyes3/">
+                            <i class="fab fa-linkedin home-icons" id="linkedin-icon"></i>
+                            <span class="nav-text">LinkedIn</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a style="text-decoration:none;" target="_blank" href="https://github.com/creyesss3">
+                            <i class="fab fa-github home-icons" id="github-icon"></i>
+                            <span class="nav-text">GitHub</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-lg-8">
+                    <h1 class="header">Hi, I'm Christian.</h1>
                     <p>
-                        Hi! My name is Christian Reyes and I am a fourth year at the University
-                        of California, Berkeley studying Computer Science and Cognitive Science.
-                        I am the first in my family to attend a higher education instutition. For
-                        the past three years of my life, I have invested my time in perfecting my
-                        craft both in and out of my schoolwork. I have experience and interest in
-                        full-stack development and using programming for social good.
-                    </p>
-                    <p>
-                        Below you can find my skills, portfolio, and ways to connect with me. For 
-                        resume inquiries, shoot me an email. I look forward to hearing from you!
+                        I am a fourth year, first-generation student at the University of California, Berkeley studying Computer 
+                        Science and Cognitive Science. Over the past three years at Cal, I've dedicated myself to honing my skills
+                        both within the academic realm and beyond. My focus has been on mastering full-stack development and 
+                        leveraging programming to contribute positively to society. You can find out more about my work by checking
+                        out my coursework and portfolio. For resume inquiries or inquiries in general, don't hesitate to reach out 
+                        via email. I look forward to hearing from you! 
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- portfolio -->
-    <section id="portfolio">
-        <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">YouTube Clone</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Quiz App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Product Landing Page</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Messaging Service</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Twitter Clone</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Blog App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-     <!-- footer -->
-     <footer id="footer">
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        <div class="container-fluid">
-            <!-- social media icons -->
-            <div class="social-icons mt-4">
-                <a href="https://www.linkedin.com/in/christianreyes3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/creyesss3" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:christian7reyes@gmail.com"><i class="fa fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
-
-        <!-- load JS file -->
-        <script src="script/script.js"></script>
+    <!-- load JS file -->
+    <script src="script/script.js"></script>
 </body>
 </html>

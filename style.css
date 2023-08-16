@@ -1,62 +1,54 @@
-/* spacing on all sections */
-#about, #services, #portfolio, #contact {
-    margin-top: 64px;
-    padding-top: 64px;
-}
-#contact {
-    padding-bottom: 64px;
-}
-
-.text-center {
-    font-size: 64px;
+/* Styles for entire site 
+ * Sets default background color of pages
+ * Sets default font of pages
+*/
+html {
+    background-color: #222222;
 }
 
-/* hero background image */
-.bgimage {
-    max-width: 100%;
-    height: 1000px;
-    background: url(images/desktop5.png);
-    background-position: center;
+* {
+    font-family: 'Lato', serif;
 }
 
-/* text css above hero image */
-.hero_title {
-    font-size: 64px;
-    text-align: center;
-    position: absolute;
-    top: 20%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    color: black;
+
+/* NAVIGATION BAR */
+.navbar {
+    background-image: linear-gradient(to bottom right, #222222, #333333);
+    border-bottom: thin solid #145DA0;
 }
 
-.hero_desc {
-    font-size: 32px;
-    text-align: center;
-    position: absolute;
-    top: 35%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    color: black;
+
+/* HOME PAGE */
+.header {
+    line-height: 2.5;
+    font-family: 'Lato', serif;
+    font-weight: 20;
 }
 
-.hero_text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+/* Left-hand Side of Home Page (Image) */
+.col-lg-4 {
+    text-align: center; margin: 1em 0;
 }
 
-/* about section image */
 .imageAboutPage {
     width: 100%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0px 0px 8px #444444;
 }
 
+/* Home Page Text */
 .col-lg-8 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 2;
+    font-weight: 200;
+}
+
+#about, #services, #portfolio, #contact {
+    background-color: #222222;
+    color: #ffffff;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 /* display background color black on navbar scroll */
@@ -70,7 +62,7 @@
     cursor: pointer;
 }
 .fa-linkedin:hover, .fa-github:hover, .fa-envelope:hover {
-    color: rgb(0, 119, 255);
+    color: #145DA0;
 }
 
 .fa {
@@ -84,4 +76,55 @@
 #footer {
     background-color: #d6d6d6;
     text-align: center;
+}
+
+.nav-text {
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 200;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-text-email {
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 200;
+    text-decoration: none;
+    color: white;
+}
+
+.email {
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 200;
+    text-decoration: none;
+    color: white;
+}
+
+/* Left-hand Side of Home Page (Socials) */
+.social-icons-home {
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+    line-height: 2;
+    font-weight: 200;
+}
+
+.home-icons {
+    color: white;
+}
+
+li .email {
+    display: none;
+}
+  
+li:hover .nav-text-email {
+    display: none;
+}
+  
+li:hover .email {
+    display: inline;
 }
