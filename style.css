@@ -4,6 +4,17 @@
 */
 html {
     background-color: #222222;
+    margin: 0;
+}
+
+body {
+    background-color: #222222;
+    margin: 0;
+    height: 100%;
+}
+
+section {
+    height: 100%;
 }
 
 * {
@@ -22,7 +33,7 @@ html {
 .header {
     line-height: 2.5;
     font-family: 'Lato', serif;
-    font-weight: 20;
+    font-weight: 300;
 }
 
 /* Left-hand Side of Home Page (Image) */
@@ -41,10 +52,10 @@ html {
 .col-lg-8 {
     font-size: 20px;
     line-height: 2;
-    font-weight: 200;
+    font-weight: 300;
 }
 
-#about, #services, #portfolio, #contact {
+#about, #services, #coursework, #contact {
     background-color: #222222;
     color: #ffffff;
     padding-left: 10rem;
@@ -66,22 +77,23 @@ html {
 }
 
 .fa {
-    color: #000000;
+    color: #fff;
 }
 
 .fab {
-    color: #000000;
+    color: #fff;
 }
 /* footer styling */
 #footer {
-    background-color: #d6d6d6;
     text-align: center;
+    background-image: linear-gradient(to bottom right, #222222, #333333);
+    border-top: thin solid #145DA0;
 }
 
 .nav-text {
     font-size: 20px;
     line-height: 2;
-    font-weight: 200;
+    font-weight: 300;
     text-decoration: none;
     color: white;
 }
@@ -89,7 +101,7 @@ html {
 .nav-text-email {
     font-size: 20px;
     line-height: 2;
-    font-weight: 200;
+    font-weight: 300;
     text-decoration: none;
     color: white;
 }
@@ -127,4 +139,39 @@ li:hover .nav-text-email {
   
 li:hover .email {
     display: inline;
+}
+
+.coursework {
+    position: sticky;
+    margin-top: 5rem;
+}
+
+.card {
+    background-color: black !important;
+}
+
+.classes {
+    text-align: left;
+    line-height: 2;
+}
+
+.card-title {
+    font-family: 'Lato', serif !important;
+    font-weight: 300 !important;
+}
+
+.card-text {
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.text-center {
+    font-family: 'Lato', serif !important;
+    font-weight: 300 !important;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 300;
 }
