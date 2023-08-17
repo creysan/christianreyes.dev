@@ -20,10 +20,10 @@
 </head>
 
 <body>
-     <!-- navigation bar -->
-     <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
         <div class="container">
-            <a class="navbar-brand" href="index.html-">Christian Reyes</a>
+            <a class="navbar-brand" href="#">Christian Reyes Santos</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +36,7 @@
                         <a class="nav-link" href="coursework.html">Course Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Portfolio</a>
+                        <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
@@ -47,59 +47,76 @@
     </nav>
 
     <!-- portfolio -->
-    <section id="portfolio">
+    <section class="projects" id="projects">
         <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
+            <h1 class="text-center">Projects</h1>
+            <p class="text-center subtitle">
+                Below is a list of highlighted course-related and personal projects. For a complete list of course-related
+                projects, please reach out to me via email, or checkout the coursework page on my site. I am unable to provide code for 
+                course-related projects publicly due to academic integrity and copyright.
+            </p>
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="images/image_part_001.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">YouTube Clone</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Enigma</h4>
+                            <p class="card-text">
+                                A program written in Java to simulate the Enigma machine used in WWII. The simulator has the 
+                                ability to take initial configurations for the machine as well as encode and decode a message.
+                            </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
+                                <a target="_blank" href="https://inst.eecs.berkeley.edu/~cs61b/fa21/materials/proj/proj1/index.html" class="btn btn-success">Project Spec</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="images/image_part_002.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Quiz App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Gitlet</h4>
+                            <p class="card-text">
+                                A version-control system written in Java that mimics some of the features of Git. Gitlet supports
+                                committing, checking out, logs, branches, and merges. Objects used in this project are blobs, trees,
+                                and commits.
+                             </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
+                                <a target="_blank" href="https://inst.eecs.berkeley.edu/~cs61b/fa21/materials/proj/proj3/index.html" class="btn btn-success">Project Spec</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="images/image_part_003.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Product Landing Page</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Hodgkin-Huxley Model</h4>
+                            <p class="card-text">
+                                A Python project that replicates the Hodgkin-Huxley model. It contains a simulated voltage-clamp experiment 
+                                and comparison of Euler and Runge-Kutta integrations to solve the HH equation.
+                            </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
+                                <a href="#" class="btn btn-success">Jupyter Notebook</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
+            
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="images/image_part_007.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Messaging Service</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Predicting Housing Prices</h4>
+                            <p class="card-text">
+                                I predicted housing prices in Cook County based on a variety of factors. In this project, I implemented 
+                                a data processing pipeline using Pandas and used scikit-learn to build and fit linear models.
+                            </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
+                                <a href="#" class="btn btn-success">Jupyter Notebook</a>
                             </div>
                         </div>
                     </div>
@@ -107,12 +124,15 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="images/image_part_008.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Twitter Clone</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Secure File Sharing System</h4>
+                            <p class="card-text">
+                                Written in Go, I utilized cryptographic library functions to design a secure file sharing system, 
+                                which will allow users to log in, store files, and share files with other users, while in the presence of attackers.
+                            </p>
                             <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
+                                <a href="https://su23.cs161.org/proj2/" class="btn btn-success">Project Spec</a>
                             </div>
                         </div>
                     </div>
@@ -120,10 +140,13 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="images/image_part_009.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Blog App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4 class="card-title">Survey Form</h4>
+                            <p class="card-text">As part of CDSS, I was in charge of creating a survey for a mentorship program. 
+                                The backend stored data on Google Sheets, and a Python model was run on the data to create
+                                the best mentor/mentee matches.
+                            </p>
                             <div class="text-center">
                                 <a href="#" class="btn btn-success">Link</a>
                             </div>
