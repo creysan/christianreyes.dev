@@ -201,13 +201,13 @@ li:hover .email {
 }
 
 .btn {
-    background-color: #145DA0;
-    color: white;
+    background-color: #145DA0 !important;
+    border-color: #145Da0 !important;
     border: none;
 }
 
 .btn-success {
-    background-color: #145DA0 !important;
-    border-color: #145DA0 !important;
+    background-color: #092540 !important;
+    border-color: #092540 !important;
     border: none;
 }
