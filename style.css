@@ -189,8 +189,6 @@ li:hover .email {
 
 .blog, .projects {
     line-height: 2;
-    width: 100%;
-    height: 100vh;
 }
 
 .images {
@@ -202,6 +200,12 @@ li:hover .email {
 }
 
 .btn {
+    background-color: #145DA0;
+    color: white;
+    border: none;
+}
+
+.btn-success {
     background-color: #145DA0;
     color: white;
     border: none;
