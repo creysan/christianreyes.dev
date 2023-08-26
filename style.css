@@ -200,3 +200,9 @@ li:hover .email {
     box-shadow: 0px 0px 8px #444444;
     margin-bottom: 2rem;
 }
+
+.btn {
+    background-color: #145DA0;
+    color: white;
+    border: none;
+}
