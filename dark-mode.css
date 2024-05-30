@@ -1,14 +1,11 @@
-/* Styles for entire site 
- * Sets default background color of pages
- * Sets default font of pages
-*/
+/* dark-mode.css */
 html {
-    background-color: #f5f5f5;
+    background-color: #222222;
     margin: 0;
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #222222;
     margin: 0;
     height: 100%;
 }
@@ -24,13 +21,8 @@ section {
 
 /* NAVIGATION BAR */
 .navbar {
-    background-image: linear-gradient(to bottom right, #ffffff, #f5f5f5f5);
+    background-image: linear-gradient(to bottom right, #222222, #333333);
     border-bottom: thin solid #145DA0;
-    color: #222222;
-}
-
-.navbar-dark, .navbar-brand, .nav-link {
-    color: #222222 !important;
 }
 
 
@@ -61,8 +53,8 @@ section {
 }
 
 #about, #coursework, #projects, #blog {
-    background-color: #f5f5f5;
-    color: #222222;
+    background-color: #222222;
+    color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -87,16 +79,16 @@ section {
 }
 
 .fa {
-    color: #222222;
+    color: #fff;
 }
 
 .fab {
-    color: #222222;
+    color: #fff;
 }
 /* footer styling */
 #footer {
     text-align: center;
-    background-image: linear-gradient(to bottom right, #f5f5f5, #f9f9f9);
+    background-image: linear-gradient(to bottom right, #222222, #333333);
     border-top: thin solid #145DA0;
 }
 
@@ -105,7 +97,7 @@ section {
     line-height: 2;
     font-weight: 300;
     text-decoration: none;
-    color: #222222;
+    color: #f5f5f5;
 }
 
 .nav-text-email {
@@ -113,7 +105,7 @@ section {
     line-height: 2;
     font-weight: 300;
     text-decoration: none;
-    color: #222222;
+    color: #f5f5f5;
 }
 
 .email {
@@ -136,7 +128,7 @@ section {
 }
 
 .home-icons {
-    color: #222222;
+    color: #f5f5f5;
 }
 
 li .email {
@@ -161,7 +153,7 @@ li:hover .email {
 }
 
 .card {
-    background-image: linear-gradient(to bottom right, #f5f5f5, #f9f9f9) !important;
+    background-image: linear-gradient(to bottom right, #222222, #333333) !important;
     border-radius: 10%;
     box-shadow: 0px 0px 4px #333333;
     min-height: 250px;
