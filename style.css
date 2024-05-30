@@ -1,7 +1,4 @@
-/* Styles for entire site 
- * Sets default background color of pages
- * Sets default font of pages
-*/
+/* light-mode.css */
 html {
     background-color: #f5f5f5;
     margin: 0;
@@ -12,7 +9,6 @@ body {
     margin: 0;
     height: 100%;
 }
-
 
 section {
     height: 100%;
@@ -34,6 +30,9 @@ section {
     color: #222222 !important;
 }
 
+.navbar-toggler {
+    background-color: #D2D2D2 !important;
+}
 
 /* HOME PAGE */
 .header {
@@ -146,6 +145,14 @@ section {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     /* footer styling */
+    #project-footer {
+        text-align: center;
+        background-image: linear-gradient(to bottom right, #f5f5f5, #f9f9f9);
+        border-top: thin solid #145DA0;
+        bottom: 0;
+        width: 100%;
+    }
+
     #footer {
         text-align: center;
         position:fixed;
@@ -271,4 +278,10 @@ li:hover .email {
     background-color: #092540 !important;
     border-color: #092540 !important;
     border: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .switch {
+        margin: 0 !important;
+    }
 }

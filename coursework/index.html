@@ -251,43 +251,6 @@
         </div>
     </footer>
 
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const lightModeCSS = document.getElementById('light-mode-css');
-        const darkModeCSS = document.getElementById('dark-mode-css');
-
-        darkModeToggle.addEventListener('change', function () {
-            if (this.checked) {
-                lightModeCSS.setAttribute('media', 'none');
-                lightModeCSS.setAttribute('disabled', 'disabled');
-                darkModeCSS.removeAttribute('media');
-                darkModeCSS.removeAttribute('disabled');
-                document.body.classList.add('dark-mode');
-            } else {
-                darkModeCSS.setAttribute('media', 'none');
-                darkModeCSS.setAttribute('disabled', 'disabled');
-                lightModeCSS.removeAttribute('media');
-                lightModeCSS.removeAttribute('disabled');
-                document.body.classList.remove('dark-mode');
-            }
-        });
-
-        // On page load, check the toggle state and apply the appropriate theme
-        if (darkModeToggle.checked) {
-            lightModeCSS.setAttribute('media', 'none');
-            lightModeCSS.setAttribute('disabled', 'disabled');
-            darkModeCSS.removeAttribute('media');
-            darkModeCSS.removeAttribute('disabled');
-            document.body.classList.add('dark-mode');
-        } else {
-            darkModeCSS.setAttribute('media', 'none');
-            darkModeCSS.setAttribute('disabled', 'disabled');
-            lightModeCSS.removeAttribute('media');
-            lightModeCSS.removeAttribute('disabled');
-            document.body.classList.remove('dark-mode');
-        }
-    </script>
-
     <!-- load JS file -->
     <script src="/script/script.js"></script>
 </body>
