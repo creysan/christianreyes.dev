@@ -247,11 +247,26 @@ li:hover .email {
     padding-bottom: 2rem;
 }
 
+/* Add height and flex properties to the card element */
 .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-image: linear-gradient(to bottom right, #222222, #333333) !important;
-    border-radius: 10%;
     box-shadow: 0px 0px 4px #333333;
-    min-height: 250px;
+}
+
+/* Ensure the card body takes all the available space */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.card .btn {
+    margin-top: auto; /* Push the button to the bottom */
 }
 
 .classes {
@@ -299,8 +314,8 @@ li:hover .email {
 }
 
 .btn-success {
-    background-color: #092540 !important;
-    border-color: #092540 !important;
+    background-color: #145DA0 !important;
+    border-color: #145DA0 !important;
     border: none;
 }
 
@@ -361,5 +376,18 @@ body {
 @media only screen and (max-width: 992px) {
     .switch {
         margin: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .social-icons-home {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+    .imageAboutPage {
+        width: 90%;
+        height: auto;
     }
 }
