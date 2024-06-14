@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Reyes Santos</title>
+    <link rel="icon" href="/images/tabicon.png">
+    <!-- light mode CSS file -->
+    <link rel="stylesheet" href="/style.css" id="light-mode-css">
+    <!-- dark mode CSS file -->
+    <link rel="stylesheet" href="/dark-mode.css" id="dark-mode-css">
+    <link rel="stylesheet" href="project-pages.css" id="project-pages-css">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Open+Sans:wght@300&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCXXW5KH20"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PCXXW5KH20');
+</script>
+
+<body class="project-detail-page">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="https://christianreyes.dev/">Christian Reyes Santos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://christianreyes.dev/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://christianreyes.dev/coursework/">Course Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://christianreyes.dev/projects/">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://christianreyes.dev/blog/">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <!-- Toggle Switch -->
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- project content -->
+    <section class="project-detail" id="project-detail">
+        <div class="container mt-5 pt-5">
+            <h1 class="text-center">MNIST Neural Networks</h1>
+            <div class="text-center project-content">
+                <img src="/images/mnist-img.jpg" class="img-fluid" alt="MNIST Neural Networks">
+                <p class="text-center subtitle">
+                    By Christian Reyes Santos.
+                </p>
+                <hr>
+
+                <p>As part of my CS 189 class at UC Berkeley, I embarked on a journey to explore the fascinating world of neural networks. This project involved building both a feed-forward fully connected network and a convolutional neural network (CNN) using only NumPy. No high-level libraries like TensorFlow or PyTorch—just pure, raw NumPy. The goal was to train these models on the MNIST dataset, a cornerstone dataset in the field of machine learning and computer vision.</p>
+
+                <h4>What is the MNIST Dataset?</h4>
+
+                <p>The MNIST (Modified National Institute of Standards and Technology) dataset is one of the most famous datasets in the machine learning community. It consists of 60,000 training images and 10,000 test images of handwritten digits, ranging from 0 to 9. Each image is a 28x28 grayscale image, making it a compact but rich dataset to work with.</p>
+
+                <p>The simplicity of MNIST, coupled with its complexity for handwritten digit recognition, makes it a perfect starting point for experimenting with machine learning algorithms. It's often used as the "Hello, World!" of neural networks.</p>
+
+                <h4>The Challenge: Building a Neural Network with NumPy</h4>
+
+                <p>In my project, I set out to build two types of neural networks:</p>
+
+                <ol>
+                    <li><strong>Feed-Forward Fully Connected Network</strong></li>
+                    <li><strong>Convolutional Neural Network (CNN)</strong></li>
+                </ol>
+
+                <p>The entire process was a deep dive into the fundamentals of neural networks, where I had to implement all aspects, from forward propagation to backpropagation, using only NumPy.</p>
+
+                <h5>The Feed-Forward Fully Connected Network</h5>
+
+                <p>A feed-forward network is the simplest type of artificial neural network. In this network, the data moves in one direction—from input nodes, through hidden nodes (if any), and finally to output nodes. There are no cycles or loops in the network.</p>
+
+                <h6>Implementation Highlights:</h6>
+
+                <ul>
+                    <li><strong>Network Architecture:</strong> The network consisted of an input layer, several hidden layers, and an output layer. Each layer was fully connected to the next, meaning every neuron in one layer was connected to every neuron in the next layer.</li>
+                    <li><strong>Activation Functions:</strong> I used the ReLU (Rectified Linear Unit) function for the hidden layers and the softmax function for the output layer. ReLU introduces non-linearity into the network, and softmax is used for multi-class classification problems like digit recognition.</li>
+                    <li><strong>Forward Propagation:</strong> In forward propagation, the input is passed through the network layer by layer to obtain the output. This involves matrix multiplications and the application of activation functions.</li>
+                    <li><strong>Backpropagation:</strong> To train the network, I implemented backpropagation, a method for updating the weights of the network based on the error in the output. This involved calculating the gradient of the loss function with respect to each weight and adjusting the weights in the opposite direction of the gradient.</li>
+                </ul>
+
+                <h5>The Convolutional Neural Network (CNN)</h5>
+
+                <p>CNNs are a class of deep neural networks that are particularly effective for processing grid-like data, such as images. They are designed to automatically and adaptively learn spatial hierarchies of features from input images.</p>
+
+                <h6>Implementation Highlights:</h6>
+
+                <ul>
+                    <li><strong>LeNet Architecture:</strong> I followed the classic LeNet architecture, which consists of two convolutional layers followed by pooling layers, and then fully connected layers leading to the output. LeNet is one of the earliest and simplest CNN architectures, making it a great learning tool.</li>
+                    <li><strong>Convolutional Layers:</strong> These layers apply a set of filters (kernels) to the input image to produce a feature map. Each filter detects different features, such as edges or textures.</li>
+                    <li><strong>Pooling Layers:</strong> After convolution, pooling layers reduce the dimensionality of the feature maps, which helps in reducing the computational load and also makes the network more robust to spatial variations.</li>
+                    <li><strong>Fully Connected Layers:</strong> Finally, the output from the convolutional and pooling layers is fed into fully connected layers, which perform the final classification.</li>
+                </ul>
+
+                <h4>Training the Networks</h4>
+
+                <p>Training the networks on the MNIST dataset was a significant challenge but also a rewarding experience. Here’s how I approached it:</p>
+
+                <ol>
+                    <li><strong>Data Preprocessing:</strong> I normalized the pixel values of the images to a range of 0 to 1. This helps in faster convergence during training.</li>
+                    <li><strong>Initialization:</strong> The weights of the network were initialized randomly. Proper initialization is crucial to avoid problems like vanishing or exploding gradients.</li>
+                    <li><strong>Loss Function and Optimization:</strong> I used the cross-entropy loss function, which is common for classification tasks. For optimization, I implemented the gradient descent algorithm to update the weights.</li>
+                    <li><strong>Validation:</strong> I monitored the validation accuracy to evaluate the performance of the models. Both networks achieved impressive results, with the CNN, in particular, achieving a validation accuracy of 96-97%.</li>
+                </ol>
+
+                <h4>Reflections and Learnings</h4>
+
+                <p>Building these neural networks from scratch using only NumPy was an eye-opening experience. It provided me with a deep understanding of the inner workings of neural networks. Here are some key takeaways from this project:</p>
+
+                <ul>
+                    <li><strong>Understanding the Fundamentals:</strong> Implementing neural networks from scratch forced me to understand every detail, from matrix multiplications to the intricacies of backpropagation.</li>
+                    <li><strong>Appreciation for High-Level Libraries:</strong> This project made me appreciate the high-level libraries like TensorFlow and PyTorch, which handle many of these complexities for us.</li>
+                    <li><strong>The Power of CNNs:</strong> The convolutional neural network, with its ability to learn spatial hierarchies of features, demonstrated its power and effectiveness in image recognition tasks.</li>
+                </ul>
+
+                <p>The MNIST dataset and the process of building neural networks from scratch have been foundational in my journey through machine learning and deep learning. This project not only honed my technical skills but also ignited a passion for exploring more complex and advanced architectures in the future.</p>
+
+                <p>Feel free to check out the code and further details on my <a href="#">GitHub repository</a>.</p>
+
+                <hr>
+
+                <h4>Related Links:</h4>
+                <ul>
+                    <li><a href="http://yann.lecun.com/exdb/mnist/">MNIST Dataset on Yann LeCun's website</a></li>
+                    <li><a href="http://yann.lecun.com/exdb/lenet/">LeNet Architecture Paper</a></li>
+                </ul>
+
+                <h4>About the Author</h4>
+                <p>Christian Reyes Santos is a passionate UC Berkeley graduate, exploring the realms of machine learning, computer science, and data science. Through hands-on projects and deep dives into theory, he continually seeks to push the boundaries of what's possible with the mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="project-footer">
+        <div class="container-fluid mt-4">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/christianreyes3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/creyesss3" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:christian7reyes@gmail.com"><i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/script/script.js"></script>
+</body>
+</html>
