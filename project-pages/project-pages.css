@@ -18,6 +18,13 @@ ul, ol {
     list-style-position: inside; /* Ensure bullet/number aligns with text */
 }
 ul li, ol li {
-    text-align: center; /* Center-align list items */
+    text-align: left; /* Center-align list items */
     font-size: 1rem;
+}
+
+@media screen and (min-width: 1300px) {
+    .blog-text {
+        margin-left: 20rem;
+        margin-right: 20rem;
+    }
 }

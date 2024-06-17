@@ -93,7 +93,7 @@ section {
         text-align: center;
         background-image: linear-gradient(to bottom right, #222222, #333333);
         border-top: thin solid #145DA0;
-        bottom: 0;
+        bottom: 0 !important;
         width: 100%;
     }
 
@@ -113,7 +113,7 @@ section {
         text-align: center;
         background-image: linear-gradient(to bottom right, #222222, #333333);
         border-top: thin solid #145DA0;
-        bottom: 0;
+        bottom: 0 !important;
         width: 100%;
     }
 
@@ -133,7 +133,7 @@ section {
         text-align: center;
         background-image: linear-gradient(to bottom right, #222222, #333333);
         border-top: thin solid #145DA0;
-        bottom: 0;
+        bottom: 0 !important;
         width: 100%;
     }
 
@@ -153,8 +153,6 @@ section {
         text-align: center;
         background-image: linear-gradient(to bottom right, #222222, #333333);
         border-top: thin solid #145DA0;
-        bottom: 0 !important;
-        position: fixed;
         width: 100%;
     }
 
@@ -162,7 +160,7 @@ section {
         text-align: center;
         background-image: linear-gradient(to bottom right, #222222, #333333);
         border-top: thin solid #145DA0;
-        bottom: 0;
+        bottom: 0 !important;
         width: 100%;
     }
 }
@@ -174,7 +172,6 @@ section {
         text-align: center;
         background-image: linear-gradient(to bottom right, #222222, #333333);
         border-top: thin solid #145DA0;
-        bottom: 0;
         width: 100%;
     }
 
@@ -183,7 +180,6 @@ section {
         position:fixed;
         background-image: linear-gradient(to bottom right, #222222, #333333);
         border-top: thin solid #145DA0;
-        bottom: 0;
         width: 100%;
     }
 }
@@ -239,12 +235,12 @@ li:hover .email {
     display: inline;
 }
 
-.coursework, .blog, .projects {
+.coursework, .blog, .projects, .project-detail {
     position: sticky;
     margin-top: 5rem;
 }
 
-.projects {
+.projects, .project-detail {
     padding-bottom: 2rem;
 }
 
