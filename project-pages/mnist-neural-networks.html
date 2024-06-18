@@ -80,14 +80,18 @@
                     <hr>
     
                     <p>As part of my CS 189 class at UC Berkeley, I embarked on a journey to explore the fascinating world of neural networks. This project involved building both a feed-forward fully connected network and a convolutional neural network (CNN) using only NumPy. No high-level libraries like TensorFlow or PyTorch—just pure, raw NumPy. The goal was to train these models on the MNIST dataset, a cornerstone dataset in the field of machine learning and computer vision.</p>
-    
-                    <h4>What is the MNIST Dataset?</h4>
+                    
+                    <hr>
+                    
+                    <h3>What is the MNIST Dataset?</h3>
     
                     <p>The MNIST (Modified National Institute of Standards and Technology) dataset is one of the most famous datasets in the machine learning community. It consists of 60,000 training images and 10,000 test images of handwritten digits, ranging from 0 to 9. Each image is a 28x28 grayscale image, making it a compact but rich dataset to work with.</p>
     
                     <p>The simplicity of MNIST, coupled with its complexity for handwritten digit recognition, makes it a perfect starting point for experimenting with machine learning algorithms. It's often used as the "Hello, World!" of neural networks.</p>
     
-                    <h4>The Challenge: Building a Neural Network with NumPy</h4>
+                    <hr>
+
+                    <h3>The Challenge: Building a Neural Network with NumPy</h3>
     
                     <p>In my project, I set out to build two types of neural networks:</p>
     
@@ -98,11 +102,13 @@
     
                     <p>The entire process was a deep dive into the fundamentals of neural networks, where I had to implement all aspects, from forward propagation to backpropagation, using only NumPy.</p>
     
-                    <h5>The Feed-Forward Fully Connected Network</h5>
+                    <hr>
+
+                    <h3>The Feed-Forward Fully Connected Network</h3>
     
                     <p>A feed-forward network is the simplest type of artificial neural network. In this network, the data moves in one direction—from input nodes, through hidden nodes (if any), and finally to output nodes. There are no cycles or loops in the network.</p>
     
-                    <h6>Implementation Highlights:</h6>
+                    <h5>Implementation Highlights:</h5>
     
                     <ul>
                         <li><strong>Network Architecture:</strong> The network consisted of an input layer, several hidden layers, and an output layer. Each layer was fully connected to the next, meaning every neuron in one layer was connected to every neuron in the next layer.</li>
@@ -111,13 +117,21 @@
                         <li><strong>Backpropagation:</strong> To train the network, I implemented backpropagation, a method for updating the weights of the network based on the error in the output. This involved calculating the gradient of the loss function with respect to each weight and adjusting the weights in the opposite direction of the gradient.</li>
                     </ul>
                     
-                    <h6>Results:</h6>
+                    <h5>Results:</h5>
 
-                    <h5>The Convolutional Neural Network (CNN)</h5>
+                    <video width="400" controls>
+                        <source src="/images/fully_connected_video.mov" type="video/mp4">
+                        <source src="/images/fully_connected_video.mov" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+
+                    <hr>
+
+                    <h3>The Convolutional Neural Network (CNN)</h3>
     
                     <p>CNNs are a class of deep neural networks that are particularly effective for processing grid-like data, such as images. They are designed to automatically and adaptively learn spatial hierarchies of features from input images.</p>
     
-                    <h6>Implementation Highlights:</h6>
+                    <h5>Implementation Highlights:</h5>
     
                     <ul>
                         <li><strong>LeNet Architecture:</strong> I followed the classic LeNet architecture, which consists of two convolutional layers followed by pooling layers, and then fully connected layers leading to the output. LeNet is one of the earliest and simplest CNN architectures, making it a great learning tool.</li>
@@ -126,9 +140,18 @@
                         <li><strong>Fully Connected Layers:</strong> Finally, the output from the convolutional and pooling layers is fed into fully connected layers, which perform the final classification.</li>
                     </ul>
                     
-                    <h6>Results:</h6>
+                    <h5>Results:</h5>
                     
-                    <h4>Training the Networks</h4>
+                    <video width="400" controls>
+                        <source src="/images/fully_connected_video.mov" type="video/mp4">
+                        <source src="/images/fully_connected_video.mov" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    
+                    <p>Note: I did not include a video because the video is too long.</p>
+                    <hr>
+
+                    <h3>Training the Networks</h3>
     
                     <p>Training the networks on the MNIST dataset was a significant challenge but also a rewarding experience. Here’s how I approached it:</p>
     
@@ -138,8 +161,10 @@
                         <li><strong>Loss Function and Optimization:</strong> I used the cross-entropy loss function, which is common for classification tasks. For optimization, I implemented the gradient descent algorithm to update the weights.</li>
                         <li><strong>Validation:</strong> I monitored the validation accuracy to evaluate the performance of the models. Both networks achieved impressive results, with the CNN, in particular, achieving a validation accuracy of 96-97%.</li>
                     </ol>
-    
-                    <h4>Reflections and Learnings</h4>
+                    
+                    <hr>
+
+                    <h3>Reflections and Learnings</h3>
     
                     <p>Building these neural networks from scratch using only NumPy was an eye-opening experience. It provided me with a deep understanding of the inner workings of neural networks. Here are some key takeaways from this project:</p>
     
@@ -164,7 +189,7 @@
                         <li><a href="http://deeplearning.stanford.edu/tutorial/supervised/ConvolutionalNeuralNetwork/">Convolutional Neural Networks</a></li>
 
                     </ul>
-    
+                    <hr>
                     <h4>About the Author</h4>
                     <p>Christian Reyes Santos is a passionate UC Berkeley graduate, exploring the realms of machine learning, computer science, and data science. Through hands-on projects and deep dives into theory, he continually seeks to push the boundaries of what's possible with the mind.</p>
                 </div>
