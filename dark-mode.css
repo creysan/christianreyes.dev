@@ -410,7 +410,7 @@ ul, ol {
     padding-left: 0; /* Remove default padding */
     list-style-position: inside; /* Ensure bullet/number aligns with text */
 }
-ul li, ol li {
+.blog-text ul li, ol li {
     text-align: center; /* Center-align list items */
     font-size: 1rem;
 }
