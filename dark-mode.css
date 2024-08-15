@@ -1,319 +1,55 @@
-/* dark-mode.css */
-html {
-    background-color: #222222;
-    margin: 0;
+:root {
+    /* Color Variables */
+    --color-primary: #0A2E50; /* Dark Blue */
+    --color-secondary: #145DA0; /* Lighter Blue */
+    --color-accent: #FFD700; /* Gold */
+    --color-highlight: #007BFF; /* Bright Blue */
+    --color-light-bg: #ffffff; /* White Background */
+    --color-dark-bg: #000000; /* Dark Background */
+    --color-light-text: #D3D3D3; /* Light Text */
+    --color-dark-text: #000000; /* Black Text */
+    --color-muted-bg: #f8f9fa; /* Light Gray Background */
+    --color-slider-bg: #cccccc; /* Light Gray for Slider */
+    --color-sun: #f39c12; /* Sun Color */
+    --color-moon: #2980b9; /* Moon Color */
 }
 
 body {
-    background-color: #222222;
+    font-family: 'Fira Code', sans-serif !important;
+    background-color: var(--color-dark-bg) !important;
     margin: 0;
     height: 100%;
 }
 
-section {
-    height: 100%;
-}
-
-* {
-    font-family: 'Lato', serif;
-}
-
-
 /* NAVIGATION BAR */
 .navbar {
-    background-image: linear-gradient(to bottom right, #222222, #333333);
-    border-bottom: thin solid #145DA0;
+    background-color: var(--color-primary);
 }
 
-
-/* HOME PAGE */
-.header {
-    line-height: 2.5;
-    font-family: 'Lato', serif;
-    font-weight: 300;
+.nav-link {
+    color: var(--color-light-text) !important;
 }
 
-/* Left-hand Side of Home Page (Image) */
-.col-lg-4 {
-    text-align: center; margin: 1em 0;
+.nav-link:hover {
+    color: var(--color-accent) !important;
 }
 
-.imageAboutPage {
-    width: 100%;
-    height: auto;
-    border-radius: 10%;
-    box-shadow: 0px 0px 8px #444444;
+.navbar-brand {
+    font-size: 1.5rem !important;
+    font-weight: 900;
+    color: var(--color-light-text);
 }
 
-/* Home Page Text */
-.col-lg-8 {
-    font-size: 20px;
-    line-height: 2;
-    font-weight: 300;
+.brand-bold {
+    font-weight: 900;
 }
 
-#about, #coursework, #projects, #blog, #project-detail {
-    background-color: #222222;
-    color: #ffffff;
+.navbar-brand:hover {
+    color: var(--color-accent) !important;
 }
 
-@media (min-width: 768px) {
-    #about, #coursework, #projects, #blog, #project-detail {
-        padding-left: 10rem;
-        padding-right: 10rem;
-    }
-}
-
-/* display background color black on navbar scroll */
-.navbarScroll.navbarDark {
-    background-color: black;
-}
-
-/* social media icons styling */
-.social-icons {
-    font-size: 36px;
-    cursor: pointer;
-}
-.fa-linkedin:hover, .fa-github:hover, .fa-envelope:hover {
-    color: #145DA0;
-}
-
-.fa {
-    color: #fff;
-}
-
-.fab {
-    color: #fff;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 400px) {
-    /* footer styling */
-    #project-footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        bottom: 0 !important;
-        width: 100%;
-    }
-
-    #footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        bottom: 0 !important;
-        width: 100%;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 401px) {
-    /* footer styling */
-    #project-footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        bottom: 0 !important;
-        width: 100%;
-    }
-
-    #footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        bottom: 0;
-        width: 100%;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    /* footer styling */
-    #project-footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        bottom: 0 !important;
-        width: 100%;
-    }
-
-    #footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        bottom: 0;
-        width: 100%;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    /* footer styling */
-    #project-footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        width: 100%;
-    }
-
-    #footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        bottom: 0 !important;
-        width: 100%;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    /* footer styling */
-    #project-footer {
-        text-align: center;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        width: 100%;
-    }
-
-    #footer {
-        text-align: center;
-        position:fixed;
-        background-image: linear-gradient(to bottom right, #222222, #333333);
-        border-top: thin solid #145DA0;
-        width: 100%;
-    }
-}
-
-.nav-text {
-    font-size: 20px;
-    line-height: 2;
-    font-weight: 300;
-    text-decoration: none;
-    color: #f5f5f5;
-}
-
-.nav-text-email {
-    font-size: 20px;
-    line-height: 2;
-    font-weight: 300;
-    text-decoration: none;
-    color: #f5f5f5;
-}
-
-.email {
-    font-size: 20px;
-    line-height: 2;
-    font-weight: 300;
-    text-decoration: none;
-    color: #145DA0;
-}
-
-/* Left-hand Side of Home Page (Socials) */
-.social-icons-home {
-    font-size: 20px;
-    cursor: pointer;
-    display: inline-block;
-    text-align: left;
-    list-style: none;
-    line-height: 2;
-    font-weight: 200;
-}
-
-.home-icons {
-    color: #f5f5f5;
-}
-
-li .email {
-    display: none;
-}
-  
-li:hover .nav-text-email {
-    display: none;
-}
-  
-li:hover .email {
-    display: inline;
-}
-
-.coursework, .blog, .projects, .project-detail {
-    position: sticky;
-    margin-top: 5rem;
-}
-
-.projects, .project-detail {
-    padding-bottom: 2rem;
-}
-
-/* Add height and flex properties to the card element */
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-image: linear-gradient(to bottom right, #222222, #333333) !important;
-    box-shadow: 0px 0px 4px #333333;
-}
-
-/* Ensure the card body takes all the available space */
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-
-.card .btn {
-    margin-top: auto; /* Push the button to the bottom */
-}
-
-.classes {
-    text-align: left;
-    line-height: 2;
-}
-
-.card-title {
-    font-family: 'Lato', serif !important;
-    font-weight: 400 !important;
-}
-
-.card-text {
-    font-size: 18px;
-    line-height: 2;
-    font-weight: 300;
-}
-
-.text-center {
-    font-family: 'Lato', serif !important;
-    font-weight: 300 !important;
-}
-
-.subtitle {
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.blog, .projects {
-    line-height: 2;
-}
-
-.images {
-    width: 50%;
-    height: auto;
-    border-radius: 10%;
-    box-shadow: 0px 0px 8px #444444;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    background-color: #145DA0 !important;
-    border-color: #145Da0 !important;
-    border: none;
-}
-
-.btn-success {
-    background-color: #145DA0 !important;
-    border-color: #145DA0 !important;
-    border: none;
+.brand-highlight {
+    color: var(--color-highlight);
 }
 
 
@@ -339,8 +75,8 @@ li:hover .email {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-    transition: 1s;
+    background-color: var(--color-slider-bg);
+    transition: 0.4s;
     border-radius: 3rem;
 }
 
@@ -352,70 +88,246 @@ li:hover .email {
     left: 0.125rem;
     top: 0.125rem;
     bottom: 0.125rem;
-    background-color: white;
-    transition: .4s;
+    background-color: var(--color-light-bg);
+    transition: 0.4s;
     border-radius: 50%;
 }
 
+/* Sun and Moon icon styles */
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    transition: opacity 0.4s;
+}
+
+.sun-icon {
+    left: 0.5rem;
+    color: var(--color-sun);
+}
+
+.moon-icon {
+    right: 0.5rem;
+    color: var(--color-moon);
+    opacity: 0;
+}
+
+/* Dark mode: move slider and switch icon visibility */
 input:checked + .slider {
-    background-color: #145DA0;
+    background-color: var(--color-dark-bg);
 }
 
 input:checked + .slider:before {
     transform: translateX(2rem);
 }
 
-/* Smooth transition for theme switch */
-body {
-    transition: background-color 1s, color 1s;
+input:checked + .slider .sun-icon {
+    opacity: 0;
 }
 
-@media only screen and (max-width: 992px) {
-    .switch {
-        margin: 0 !important;
-    }
+input:checked + .slider .moon-icon {
+    opacity: 1;
 }
 
-@media only screen and (max-width: 992px) {
-    .social-icons-home {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 0;
-    }
-    .imageAboutPage {
-        width: 90%;
-        height: auto;
-    }
+
+.landing-image {
+    border-radius: 10%;
 }
 
-.project-detail h1 {
-    font-size: 2.5rem;
-    color: #123456; /* Example color */
+.social-icons-home i {
+    color: var(--color-light-text);
+    transition: color 0.3s ease;
 }
 
-.project-detail img {
-    border: 2px solid #abcdef; /* Example border */
+.social-icons-home i:hover {
+    color: var(--color-accent);
 }
 
-.project-detail p {
-    line-height: 1.8;
+.header {
+    font-weight: 900;
+    color: var(--color-light-text);
+    text-align: end;
+}
+
+.lead {
+    font-size: 1.5rem;
+    color: var(--color-light-text);
+    text-align: end;
+}
+
+.landing-container {
+    background-color: var(--color-dark-bg);
+}
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+}
+
+.sub-headers {
+    color: var(--color-light-text);
+}
+
+.about, .coursework {
+    margin-bottom: 10rem;
+}
+
+.text-center {
+    color: var(--color-light-text);
+}
+
+/* Add space between list items */
+.classes li {
     margin-bottom: 0.5rem;
-    color: white;
-    font-size: 1rem;
+    list-style-type: none; /* Removes bullet points */
 }
 
-ul, ol {
-    text-align: left; /* Ensure text is aligned left within the list */
-    padding-left: 0; /* Remove default padding */
-    list-style-position: inside; /* Ensure bullet/number aligns with text */
-}
-.blog-text ul li, ol li {
-    text-align: center; /* Center-align list items */
+/* Style the list items */
+.classes .card-text {
     font-size: 1rem;
+    color: var(--color-light-text);
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--color-dark-bg);
+    transition: background-color 0.3s;
 }
 
-.project-detail h1 {
-    color: white;
-    font-size: 2.5rem;
+.classes .card-text a {
+    color: var(--color-highlight);
+    text-decoration: none;
+}
+
+.classes .card-text a:hover {
+    text-decoration: underline;
+}
+
+
+.btn {
+    width: 100%;
+    color: var(--color-light-text) !important;
+}
+
+.btn:hover {
+    color: var(--color-accent) !important;
+}
+
+.classes {
+    width: 100%;
+    padding-left: 0;
+}
+
+
+.projects .card {
+    background-color: var(--color-primary);
+    color: var(--color-light-text);
+    border-radius: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.projects .card-body {
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.project-btn {
+    width: auto;
+}
+
+.footer {
+    background-color: var(--color-primary);
+    color: white !important;
+}
+
+
+.footer a {
+    color: var(--color-light-text);
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--color-accent);
+}
+
+
+
+/* Adjust image size on smaller screens */
+@media (max-width: 991px) {
+    .landing-image {
+        max-width: 50% !important; /* Adjust the percentage as needed */
+        margin: 0 auto; /* Center the image */
+    }
+    
+    /* Adjust text alignment */
+    .header, .lead {
+        text-align: center; /* Center text for better readability on small screens */
+    }
+
+    /* Adjust the container padding */
+    .landing .container {
+        padding: 2rem 1rem;
+    }
+    
+    /* Adjust social icons */
+    .social-icons-home {
+        margin-top: 20px;
+        text-align: center; /* Center icons on smaller screens */
+    }
+}
+
+/* Optional: Adjust the row stacking on smaller screens */
+@media (max-width: 768px) {
+    .landing .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-lg-4, .col-lg-8 {
+        text-align: center;
+    }
+
+    .projects .card {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23007BFF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0 !important;
+}
+
+/* Media query to left-align the switch under 992px */
+@media (max-width: 991px) {
+    .switch {
+        margin: 0; /* Remove auto-centering */
+    }
+
+    .projects .card {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .about, .coursework {
+        margin-bottom: 5rem;
+    }
+}
+
+@media (max-width: 415px) {
+    .navbar-brand {
+        font-size: 1rem !important;
+    }
+}
+
+.blog-img {
+    max-width: 100% !important;
 }

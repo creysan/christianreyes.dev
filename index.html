@@ -14,12 +14,113 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- icons -->
-    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Open+Sans:wght@300&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Open+Sans:wght@300&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
+<style type="text/css">
+	.autohide{
+		position: fixed;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: 1030;
+	}
+	.scrolled-down{
+		transform:translateY(-100%); transition: all 0.3s ease-in-out;
+	}
+	.scrolled-up{
+		transform:translateY(0); transition: all 0.3s ease-in-out;
+	}
+
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+		
+		el_autohide = document.querySelector('.autohide');
+	
+
+		if(el_autohide){
+			var last_scroll_top = 0;
+			window.addEventListener('scroll', function() {
+	       		let scroll_top = window.scrollY;
+		       if(scroll_top < last_scroll_top) {
+		            el_autohide.classList.remove('scrolled-down');
+		            el_autohide.classList.add('scrolled-up');
+		        }
+		        else {
+		            el_autohide.classList.remove('scrolled-up');
+		            el_autohide.classList.add('scrolled-down');
+		        }
+		        last_scroll_top = scroll_top;
+
+			});
+		}	
+	}); 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var toggleButton = document.getElementById('toggleProjectsBtn');
+        var hiddenProjects = document.querySelectorAll('#projectsList .d-none');
+
+        toggleButton.addEventListener('click', function() {
+            hiddenProjects.forEach(function(project) {
+                if (project.style.display === 'none' || project.style.display === '') {
+                    project.style.display = 'flex';
+                    toggleButton.textContent = 'Show Less Projects';
+                } else {
+                    project.style.display = 'none';
+                    toggleButton.textContent = 'Show More Projects';
+                }
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var typed = new Typed('#typed-text', {
+            strings: ["Hi, I'm Christian."], // The text you want to type out
+            typeSpeed: 50, // Speed of typing
+            backSpeed: 50, // Speed of backspacing
+            startDelay: 1000, // Delay before typing starts
+            backDelay: 10000, // Delay before backspacing
+            loop: false, // Set to true if you want to loop the typing
+            showCursor: true, // Whether to show the blinking cursor
+            cursorChar: '|', // Character for cursor
+            autoInsertCss: true // Auto insert CSS for cursor & typing
+        });
+
+        var typedcaption = new Typed('#typed-text-caption', {
+            strings: ["I craft impactful solutions through data, machine learning, and full stack development."], // The text you want to type out
+            typeSpeed: 50, // Speed of typing
+            backSpeed: 50, // Speed of backspacing
+            startDelay: 2000, // Delay before typing starts
+            backDelay: 10000, // Delay before backspacing
+            loop: false, // Set to true if you want to loop the typing
+            showCursor: true, // Whether to show the blinking cursor
+            cursorChar: '|', // Character for cursor
+            autoInsertCss: true // Auto insert CSS for cursor & typing
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Whether animation should happen only once or every time you scroll
+            offset: 100, // Offset (in px) from the original trigger point
+            delay: 100, // Delay before the animation starts
+        });
+    });
+</script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCXXW5KH20"></script>
@@ -33,25 +134,30 @@
 
 <body>
     <!-- navigation bar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+    <nav class="autohide navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="/">Christian Reyes Santos</a>
+            <a class="navbar-brand" href="#">
+                <span class="brand-bold">Christian</span> <span class="brand-highlight">Reyes Santos</span>
+            </a>            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://christianreyes.dev/coursework/">Course Work</a>
+                        <a class="nav-link" href="#coursework">Course Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://christianreyes.dev/projects/">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://christianreyes.dev/blog/">Blog</a>
+                        <a class="nav-link" href="/blog/index.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:christian7reyes@gmail.com">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"></a>
@@ -59,63 +165,387 @@
                     <!-- Toggle Switch -->
                     <label class="switch">
                         <input type="checkbox" id="darkModeToggle">
-                        <span class="slider"></span>
+                        <span class="slider">
+                            <i class="icon sun-icon fas fa-sun"></i>
+                            <i class="icon moon-icon fas fa-moon"></i>
+                        </span>
                     </label>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- home -->
-    <section id="about">
-        <div class="container mt-4 pt-4">
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="images/chrisheadshot.PNG" class="imageAboutPage" alt="Headshot of me.">
-                    <ul class="social-icons-home">
-                        <li>
-                            <a style="text-decoration:none;" target="_blank" href="mailto:christian7reyes@gmail.com">
-                            <i class="fa fa-envelope home-icons" id="email-icon"></i>
-                            <span class="nav-text-email">Email</span>
-                            <span class="email">christian7reyes@gmail.com</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a style="text-decoration:none;" target="_blank" href="https://www.linkedin.com/in/christianreyes3/">
-                            <i class="fab fa-linkedin home-icons" id="linkedin-icon"></i>
-                            <span class="nav-text-email">LinkedIn</span>
-                            <span class="email">@christianreyes3</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a style="text-decoration:none;" target="_blank" href="https://github.com/creyesss3">
-                            <i class="fab fa-github home-icons" id="github-icon"></i>
-                            <span class="nav-text-email">GitHub</span>
-                            <span class="email">@creyesss3</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-8">
-                    <h1 class="header">Hi, I'm Christian.</h1>
-                    <p>
-                        I am a first-generation graduate from the University of California, Berkeley with degrees 
-                        in Data Science and Cognitive Science, and a minor in Computer Science. Over the past four 
-                        years at Cal, I have dedicated myself to mastering backend development, data science, and 
-                        machine learning, both through academic coursework and hands-on projects. My work ranges 
-                        from developing cross-platform mobile apps and optimizing machine learning algorithms to 
-                        conducting advanced research in neuroscience and creating data-driven solutions for real-world 
-                        problems. For a detailed look at my experience and projects, please refer to my coursework 
-                        and projects tabs. For resume or general inquiries, don't hesitate to reach out via email. I 
-                        look forward to hearing from you!
-                    </p>
+    <section id="landing-container" class="landing-container">
+        <div class="landing">
+            <div class="container mt-5 pt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                        <img src="images/chrisheadshot.PNG" class="landing-image img-fluid" alt="Headshot of me.">
+                        <ul class="social-icons-home list-inline mt-3">
+                            <li class="list-inline-item">
+                                <a href="mailto:christian7reyes@gmail.com" target="_blank" class="text-decoration-none">
+                                    <i class="fa fa-envelope fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/christianreyessantos/" target="_blank" class="text-decoration-none">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/creysan" target="_blank" class="text-decoration-none">
+                                    <i class="fab fa-github fa-2x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <h1 class="header display-4">
+                            <span id="typed-text"></span>
+                        </h1>
+                        <p class="lead">
+                            <span id="typed-text-caption"></span>
+                        </p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- about -->
+    <section id="about" class="about" data-aos="fade-up" data-aos-duration="5000">
+        <div class="container mt-5 pt-5">
+            <div class="col-lg mx-auto">
+                <h1 class="header sub-headers text-center">About Me</h1>
+                <p class="text-color text-center">
+                    I am a first-generation graduate from the University of California, Berkeley with degrees 
+                    in Data Science and Cognitive Science, and a minor in Computer Science. Over the past four 
+                    years at Cal, I have dedicated myself to mastering backend development, data science, and 
+                    machine learning, both through academic coursework and hands-on projects. My work ranges 
+                    from developing cross-platform mobile apps and optimizing machine learning algorithms to 
+                    conducting advanced research in neuroscience and creating data-driven solutions for real-world 
+                    problems. Scroll down for a detailed look at my course work, skills, and projects. For resume 
+                    or general inquiries, don't hesitate to reach out via email. I look forward to hearing from you!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- coursework -->
+    <section class="coursework" id="coursework" data-aos="fade-up" data-aos-duration="5000">
+        <div class="container mt-5 pt-5">
+            <h1 class="header sub-headers text-center">Coursework</h1>
+            <p class="text-center subtitle">
+                These are the technical courses I took during my time at Berkeley, including ones I audited.
+            </p>
+            <div class="row">
+                <div class="col-lg d-flex flex-column align-items-center mt-3">
+                    <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#computer-science" aria-expanded="false" aria-controls="computer-science">
+                        Computer Science <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="collapse" id="computer-science">
+                        <ul class="classes">
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://cs10.org/fa20/">CS 10</a>: The Beauty and Joy of Computing</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://inst.eecs.berkeley.edu/~cs61a/sp21/">CS 61A</a>: The Structure and Interpretation of Computer Programs</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://inst.eecs.berkeley.edu/~cs61b/fa21/">CS 61B</a>: Data Structures</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://cs61c.org/su23/">CS 61C</a>: Great Ideas of Computer Architecture (Machine Structures)</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://www.sp22.eecs70.org/">CS 70</a>: Discrete Mathematics and Probability Theory</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://su23.cs161.org/">CS 161</a>: Computer Security</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://cs170.org/">CS 170</a>: Efficient Algorithms & Intractable Problems</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://inst.eecs.berkeley.edu/~cs188/sp24/">CS 188</a>: Introduction to Artificial Intelligence (Audited)</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://people.eecs.berkeley.edu/~jrs/189/">CS 189</a>: Introduction to Machine Learning</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://inst.eecs.berkeley.edu/~eecs127/sp24/">EECS 127</a>: Optimization Models in Engineering (Audited)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg d-flex flex-column align-items-center mt-3">
+                    <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#cognitive-science" aria-expanded="false" aria-controls="cognitive-science">
+                        Cognitive Science <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="collapse" id="cognitive-science">
+                        <ul class="classes">
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://classes.berkeley.edu/content/2022-spring-cogsci-1-001-lec-001">COGSCI 1</a>: Introduction to Cognitive Science</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://guide.berkeley.edu/courses/cog_sci/">COGSCI C126</a>: Perception</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://classes.berkeley.edu/content/2024-spring-cogsci-c127-001-lec-001">COGSCI C127</a>: Cognitive Neuroscience</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://guide.berkeley.edu/courses/cog_sci/">COGSCI 131</a>: Computational Models of Cognition</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://guide.berkeley.edu/courses/cog_sci/">COGSCI 132</a>: Rhythms of the Brain: From Neuronal Communication to Function</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://guide.berkeley.edu/courses/cog_sci/">COGSCI 144</a>: Cognitive Science of Language</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://decal.berkeley.edu/courses/5117">ELENG 198</a>: Introduction to Neurotechnology</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://guide.berkeley.edu/courses/mcellbi/">MCELLBI C61</a>: Brain, Mind, and Behavior</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://guide.berkeley.edu/courses/mcellbi/">MCELLBI 166</a>: Biophysical Neurobiology (Planned)</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://guide.berkeley.edu/courses/philos/">PHILOS 3</a>: The Nature of Mind</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg d-flex flex-column align-items-center mt-3">
+                    <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#data-science" aria-expanded="false" aria-controls="data-science">
+                        Data Science <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="collapse" id="data-science">
+                        <ul class="classes">
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://www.data8.org/sp22/">Data C8</a>: Foundations of Data Science</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://data-88e.github.io/fa22/">Data 88E</a>: Economic Models</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://ds100.org/fa22/">Data C100</a>: Principles & Techniques of Data Science</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://data102.org/fa23/">Data C102</a>: Data, Inference, and Decisions</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://cdss.berkeley.edu/data-104-human-contexts-and-ethics-data">Data C104</a>: Human Contexts and Ethics of Data</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="http://prob140.org/logistics/">Data C140</a>: Probability for Data Science</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://data.berkeley.edu/discovery">Data 198</a>: Directed Group Studies for Advanced Undergraduates</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://classes.berkeley.edu/content/2023-spring-data-c104-001-lec-001">Data C104</a>: Human Context and Ethics of Data</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://math.berkeley.edu/courses/fall-2021-math-54-002-lec">Math 54</a>: Linear Algebra and Differential Equations</p>
+                            </li>
+                            <li>
+                                <p class="card-text"><a target="_blank" href="https://classes.berkeley.edu/content/2022-fall-math-91-001-lec-001s">Math 91</a>: Special Topics in Mathematics</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- projects -->
+    <section id="projects" class="projects" data-aos="fade-up" data-aos-duration="5000">
+        <div class="container mt-5 pt-5">
+            <h1 class="header sub-headers text-center mt-3">Projects</h1>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card mx-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">MNIST Neural Networks</h5>
+                            <p class="card-text">A feed-forward fully connected network and a convolutional neural network built using plain NumPy. 
+                                The CNN, built with a LeNet architecture, was trained on the MNIST dataset and achieved a validation 
+                                accuracy of 96-97%.</p>
+                            <a href="/project-pages/mnist-neural-networks.html" target="_blank" class="project-btn btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">Unwrapping Formula 1</h5>
+                                    <p class="card-text">A backend system built with Flask using the Fast F1 Python library to collect and preprocess 
+                                        Formula 1 race data, enabling users to get predictions based on inputs and historical data
+                                        alongside interactive visualizations to display predicted outcomes alongside historical trends.</p>
+                                    <a href="https://github.com/creysan/unwrapping-formula-1" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">EEG Data Analysis for Deep TMS Treatment of Severe Depression</h5>
+                                    <p class="card-text"> A comprehensive analysis of EEG data from individuals undergoing dTMS for severe depression, developing 
+                                        and implementing advanced signal processing techniques for artifact removal, feature extraction, and 
+                                        time-frequency analysis and a classification model to identify patterns associated with treatment response 
+                                        and symptom improvement.</p>
+                                    <a href="https://github.com/creysan" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">Predicting Housing Prices</h5>
+                                    <p class="card-text">I predicted housing prices in Cook County based on a variety of factors. In this project, I implemented 
+                                        a data processing pipeline using Pandas and used scikit-learn to build and fit linear models.</p>
+                                    <a href="https://github.com/creysan" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">Secure File Sharing System</h5>
+                                    <p class="card-text">Written in Go, I utilized cryptographic library functions to design a secure file sharing system, 
+                                        which will allow users to log in, store files, and share files with other users, while in the presence of attackers.</p>
+                                    <a href="https://github.com/creysan" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">Survey Form</h5>
+                                    <p class="card-text">As part of CDSS, I was in charge of creating a survey for a mentorship program. 
+                                        The backend stored data on Google Sheets, and a Python model was run on the data to create
+                                        the best mentor/mentee matches.</p>
+                                    <a href="https://github.com/creysan" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">Enigma</h5>
+                                    <p class="card-text">A program written in Java to simulate the Enigma machine used in WWII. The simulator has the 
+                                        ability to take initial configurations for the machine as well as encode and decode a message.</p>
+                                    <a href="https://github.com/creysan" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gitlet</h5>
+                                    <p class="card-text">A version-control system written in Java that mimics some of the features of Git. Gitlet supports
+                                        committing, checking out, logs, branches, and merges. Objects used in this project are blobs, trees,
+                                        and commits.</p>
+                                    <a href="https://github.com/creysan" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="col-lg-12 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hodgkin-Huxley Model</h5>
+                                    <p class="card-text">A Python project that replicates the Hodgkin-Huxley model. It contains a simulated voltage-clamp experiment 
+                                        and comparison of Euler and Runge-Kutta integrations to solve the HH equation.</p>
+                                    <a href="https://github.com/creysan" target="_blank" class="project-btn btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center subtitle">
+                Disclaimer: I work on refining projects all the time. Projects listed here are subject to change. I am unable to provide code 
+                for course-related projects publicly due to academic integrity and copyright.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-4">
+        <div class="container text-center">
+            <p>Contact Me:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="mailto:christian7reyes@gmail.com" target="_blank" class="text-decoration-none">
+                        <i class="fa fa-envelope fa-lg"></i> Email
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/christianreyessantos/" target="_blank" class="text-decoration-none">
+                        <i class="fab fa-linkedin fa-lg"></i> LinkedIn
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/creysan" target="_blank" class="text-decoration-none">
+                        <i class="fab fa-github fa-lg"></i> GitHub
+                    </a>
+                </li>
+            </ul>
+            <p class="mb-0">&copy; 2024 Christian Reyes Santos</p>
+        </div>
+    </footer>
+    
     <!-- load JS file -->
     <script src="script/script.js"></script>
 </body>
