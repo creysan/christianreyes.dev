@@ -3,28 +3,28 @@ body.project-detail-page .project-detail h1 {
 }
 
 body.project-detail-page .project-detail img {
-    border: 2px solid #f1f1f1; /* Example border */
+    border: 2px solid #0A2E50;
 }
 
 body.project-detail-page .project-detail p {
-    line-height: 1.8;
+    line-height: 1.5;
     margin-bottom: 0.5rem;
     font-size: 1rem;
 }
 
-ul, ol {
+.blog-text ul, .blog-text ol {
     text-align: left; /* Ensure text is aligned left within the list */
     padding-left: 0; /* Remove default padding */
     list-style-position: inside; /* Ensure bullet/number aligns with text */
 }
-ul li, ol li {
+.blog-text ul li, .blog-text ol li {
     text-align: left; /* Center-align list items */
     font-size: 1rem;
 }
 
 @media screen and (min-width: 1300px) {
     .blog-text {
-        margin-left: 20rem;
-        margin-right: 20rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
     }
 }

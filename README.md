@@ -1,4 +1,4 @@
-# Personal Website README
+# Personal Website
 
 Welcome to the README for my personal website! This website was built using Bootstrap for styling and vanilla front-end languages (HTML, CSS, JavaScript) for the core functionality. Additionally, an analytics tool has been implemented to track user interactions and identify areas for improvement.
 
@@ -19,7 +19,7 @@ This personal website showcases my work, skills, and interests. It has been desi
 - CSS: Styling and layout of the website.
 - JavaScript: Adding interactivity and dynamic elements.
 - Bootstrap: Used for responsive design and pre-styled components.
-- Analytics Tool: Implemented to track user interactions for insights.
+- Analytics Tool: Implemented Google Tag to track user interactions for insights.
 
 ## Features
 
